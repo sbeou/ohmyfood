@@ -12,14 +12,15 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+    <div class="loader"><span></span></div>
     <header>
-        <h1 class="logo">ohmyfood</h1>
+        <h1>ohmyfood</h1>
     </header> 
     <main>
         <div class="location">
             <p><i class="fa-solid fa-location-dot"></i> Paris, Belleville</p>
         </div>
-        <section>
+        <section class="menu">
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
             <a href="#restaurants" class="btn">Explorer nos restaurants</a>
@@ -34,41 +35,41 @@
         </section>
         <section id="restaurants">
             <h2>Restaurants</h2>
-            <div class="cards">
-                <a href="restaurants/la-palettes-du-gout.html" class="item">
-                    <div class="thunbmail">
+            <div class="cards--restaurant">
+                <article>
+                    <a href="restaurants/la-palettes-du-gout.html" class="thunbmail">
                         <span class="new">Nouveau</span>
                         <img src="img/la_palette_du_gout.jpg" alt="La palette du goût">
-                        <h3>La palette du goût</h3>
-                        <i class="fa-solid fa-heart"></i>
-                        <p>Ménilmontant</p>
-                    </div>
-                </a>
-                <a href="restaurants/la-note-enchantee.html" class="item">
-                    <div class="thunbmail">
+                    </a>
+                    <h3><a href="restaurants/la-palettes-du-gout.html">La palette du goût</a></h3>
+                    <i class="fa-solid fa-heart"></i>
+                    <p>Ménilmontant</p>
+                </article>
+                <article>
+                    <a href="restaurants/la-note-enchantee.html" class="thunbmail">
                         <span class="new">Nouveau</span>
                         <img src="img/la_note_enchantee.jpg" alt="La note enchantée">
-                        <h3>La note enchantée</h3>
-                        <i class="fa-solid fa-heart"></i>
-                        <p>Charonne</p>
-                    </div>
-                </a>
-                <a href="restaurants/a-la-francaise.html" class="item">
-                    <div class="thunbmail">
-                        <img src="img/a_la_francaise.jpg" alt="À la française">
-                        <h3>À la française</h3>
-                        <i class="fa-solid fa-heart"></i>
-                        <p>Cité Rouge</p>
-                    </div>
-                </a>
-                <a href="restaurants/le-delice-des-sens.html" class="item">
-                    <div class="thunbmail">
+                    </a>
+                    <h3><a href="restaurants/la-note-enchantee.html">La note enchantée</a></h3>
+                    <i class="fa-solid fa-heart"></i>
+                    <p>Charonne</p>
+                </article>
+                <article>
+                    <a href="restaurants/a-la-francaise.html" class="thunbmail">
+                        <img src="img/a_la_francaise.jpg" alt="À la française">    
+                    </a>
+                    <h3><a href="restaurants/a-la-francaise.html">À la française</a></h3>
+                    <i class="fa-solid fa-heart"></i>
+                    <p>Cité Rouge</p>
+                </article>
+                <article>
+                    <a href="restaurants/le-delice-des-sens.html" class="thunbmail">
                         <img src="img/le_delice_des-Sens.jpg" alt="Le délice des sens">
-                        <h3>Le délice des sens</h3>
-                        <i class="fa-solid fa-heart"></i>
-                        <p>Folie-Méricourt</p>
-                    </div>
-                </a>
+                    </a>
+                    <h3><a href="restaurants/le-delice-des-sens.html">Le délice des sens</a></h3>
+                    <i class="fa-solid fa-heart"></i>
+                    <p>Folie-Méricourt</p>
+                </article>
             </div>
         </section>
     </main>
