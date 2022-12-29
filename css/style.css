@@ -1,33 +1,31 @@
 /* PRIMARY COLORS */
 /*loader*/
 @-webkit-keyframes loader {
-  0% {
-    opacity: 100;
+  from {
+    visibility: visible;
   }
-  100% {
-    opacity: 0;
+  to {
+    visibility: hidden;
   }
 }
 @keyframes loader {
-  0% {
-    opacity: 100;
+  from {
+    visibility: visible;
   }
-  100% {
-    opacity: 0;
+  to {
+    visibility: hidden;
   }
 }
 .loader {
   display: flex;
+  height: 100%;
   align-items: center;
   justify-content: center;
   background-color: white;
-  transition: opacity 0;
-  transition-delay: 0, 150ms;
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 100%;
-  -webkit-animation: loader 1s linear 5s both normal;
-          animation: loader 1s linear 5s both normal;
+  -webkit-animation: loader 2s ease-out 5s both;
+          animation: loader 2s ease-out 5s both;
 }
 .loader span {
   border: 16px solid #F6F6F6;
@@ -98,13 +96,15 @@ section {
 .menu {
   text-align: center;
   padding: 40px;
+  display: block;
 }
 .menu p {
   font-size: 18px;
   font-weight: 300;
+  padding-bottom: 20px;
 }
 .menu h2 {
-  padding: 0 30px;
+  padding: 0 30px 20px 30px;
 }
 
 .btn {
@@ -112,4 +112,11 @@ section {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 800ms ease-in-out;
+}
+.btn:hover {
+  background: linear-gradient(200.64deg, #b184e5 -5.2%, #ff9ee5 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }/*# sourceMappingURL=style.css.map */
