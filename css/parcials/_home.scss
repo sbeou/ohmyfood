@@ -1,0 +1,107 @@
+.location {
+    background-color: $grey2;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+        margin-right: 1em;
+    }
+}
+.teazer {
+    text-align: center;
+    padding: 40px;
+    display: block;
+    p {
+        font-size: 18px;
+        font-weight:300;
+        padding-bottom: 20px;
+    }
+    h2 {padding: 0 30px 20px 30px;}
+}
+.bgWhite {
+    background-color: white;
+}
+.fonctionement {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    li {
+        background: #F7F7F7;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        font-weight: 500;
+        margin: 15px 0;
+        height:72px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        gap:25px;
+        padding-left: 30px;
+        &:last-child {
+            background-color: #F5EDFF;
+            i {
+                color: $purple;
+            }
+        }
+        span {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            left: -12px;
+            border-radius: 100%;
+            color: white;
+            background-color: $purple;
+            text-align: center;
+            line-height: 24px;
+        }
+    }
+}
+.cards--restaurant {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:18px;
+    article {
+        background: white;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        padding: 0 12px 12px 12px;
+        overflow: hidden;
+        a {
+            color:$grey;
+            &:hover {
+                color: $purple;
+            }
+        }
+    }
+    .thunbmail {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        height: 175px;
+        margin: 0 -12px 16px -12px;
+        span {
+            position: absolute;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 2px;
+            color: $green;
+            background-color: $light_Green;
+            padding:7px 9px;
+            top:13px;
+            right:12px;
+            z-index: 2;
+        }
+        img {
+            transition: all 500ms ease-in-out;
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+}
