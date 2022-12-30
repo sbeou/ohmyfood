@@ -78,15 +78,18 @@ a {
 
 header {
     background-color: white;
-    padding:10px;
+    padding:10px 20px;
     text-align: center;
     color: $black;
+    line-height: 44px;
+    a {
+        float: left;
+    }
 }
 .logo {
     font-family: 'Shrikhand';
     font-weight: 400;
     font-size: 30px;
-    line-height: 44px;
 }
 .location {
     background-color: $grey2;
@@ -107,7 +110,7 @@ section {
     flex-direction: column;
     align-items: center;
 }
-.menu {
+.teazer {
     text-align: center;
     padding: 40px;
     display: block;
@@ -190,22 +193,6 @@ section {
                 color: $purple;
             }
         }
-        .like {
-            background: $grey;
-            font-weight: 400;
-            float: right;
-            cursor: pointer;
-            transition: background 800ms ease-in-out, font-weight 500ms ease-in-out;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            &:hover {
-                background:#9356DC;
-                background:linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-                font-weight: 700;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-        }
     }
     .thunbmail {
         position: relative;
@@ -234,6 +221,24 @@ section {
         }
     }
 }
+.like {
+    background: $grey;
+    font-weight: 400;
+    float: right;
+    cursor: pointer;
+    transition: background 800ms ease-in-out, font-weight 500ms ease-in-out;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover {
+        background:#9356DC;
+        background:linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+        font-weight: 700;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
 footer {
     color: white;
     background-color: $grey;
@@ -254,5 +259,99 @@ footer {
     }
     i {
         margin-right: 10px;
+    }
+}
+.menu {
+    border-radius: 40px 40px 0px 0px;
+    top:-50px;
+    background-color: $light_grey;
+    padding: 30px 15px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    h2 {
+        padding: 0;
+    }
+    .like {
+        font-size: 24px;
+        margin-right: 15px;
+    }
+    h3 {
+        font-weight: 300;
+        font-size: 16px;
+        align-self: flex-start;
+        &::after {
+            content: "";
+            display: block;
+            background-color: $green;
+            height:3px;
+            width: 40px;
+            margin-top: 10px;
+        }
+    }
+    section, .restaurant-name {
+        display: block;
+        max-width: 630px;
+        margin: 0 auto;
+        width: calc(100% - 40px);
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap:15px;
+    }
+    li {
+        background-color:white;
+        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        display: flex;
+        margin:12px 0;
+        height:70px;
+        overflow: hidden;
+        flex-direction: column;
+        position: relative;
+        cursor: pointer;
+        * {
+            transition: all 500ms ease-in-out;
+        }
+        &:hover .text, .text:hover{
+            margin-right: 60px;
+        }
+        &:hover .check {
+            right:0;
+        }
+
+    }
+    .text {
+        padding: 12px;
+        float: left;
+    }
+    .price {
+        font-size: 15px;
+        font-weight: 700;
+        float: right;
+    }
+    .check {
+        position: absolute;
+        color: white;
+        background-color: $light_Green;
+        height:70px;
+        width:60px;
+        line-height: 70px;
+        font-size: 20px;
+        text-align: center;
+        top: 0;
+        margin-left:15px;
+        right: -60px;
+    }
+    h4{
+        font-size: 18px;
+        line-height: 25px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 300px;
     }
 }
