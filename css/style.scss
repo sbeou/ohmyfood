@@ -9,10 +9,6 @@ $light_grey: #F6F6F6;
 $black: #101010;
 $grey2: #EAEAEA;
 
-@import "parcials/loader";
-@import "parcials/home";
-@import "parcials/restaurant-page";
-
 * {
     margin: 0;
     padding: 0;
@@ -65,7 +61,7 @@ header {
     font-size: 30px;
 }
 
-section {
+section, footer {
     padding: 40px 20px;
     display: flex;
     gap: 20px;
@@ -129,3 +125,37 @@ footer {
         margin-right: 10px;
     }
 }
+@media (min-width:768px) {
+    body {
+        font-size:17px;
+    }
+    .container {
+        max-width:1055px;
+        margin: 0 auto;
+        width:100%;
+        li {
+            width:28%;
+        }
+    }
+    .btn {
+        padding: 16px 30px;
+    }
+    footer {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .logo {
+            font-size: 18px;
+            order: 2;
+            padding: 0;
+        }
+        ul {
+            display: flex;
+            gap: 15px;
+        }
+    }
+}
+
+@import "parcials/loader";
+@import "parcials/home";
+@import "parcials/restaurant-page";
