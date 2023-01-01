@@ -129,16 +129,19 @@ footer i {
     margin: 0 auto;
     width: 100%;
   }
-  .container li {
-    width: 28%;
+  .logo {
+    font-size: 37px;
+    line-height: 55px;
   }
   .btn {
     padding: 16px 30px;
   }
-  footer {
+  footer .container {
+    display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    gap: 15px;
   }
   footer .logo {
     font-size: 18px;
@@ -174,16 +177,16 @@ footer i {
   background-color: white;
   position: fixed;
   width: 100%;
-  -webkit-animation: loader 2s ease-out 5s both;
-          animation: loader 2s ease-out 5s both;
+  -webkit-animation: loader 2s ease-out 3s both;
+          animation: loader 2s ease-out 3s both;
   z-index: 100;
 }
 .loader span {
-  border: 16px solid #F6F6F6;
-  border-top: 16px solid #9356DC;
+  border: 8px solid #F6F6F6;
+  border-top: 8px solid #9356DC;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 30px;
+  height: 30px;
   -webkit-animation: spin 2s linear infinite;
           animation: spin 2s linear infinite;
 }
@@ -317,6 +320,9 @@ footer i {
     justify-content: space-between;
     width: 100%;
     font-size: 16px;
+  }
+  .fonctionement li {
+    width: 28%;
   }
   .cards--restaurant {
     flex-direction: row;

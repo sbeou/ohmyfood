@@ -120,6 +120,9 @@
         justify-content: space-between;
         width:100%;
         font-size: 16px;
+        li {
+            width:28%;
+        }
     }
     .cards--restaurant {
         flex-direction: row;
