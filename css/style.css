@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #F6F6F6;
   font-family: "Roboto";
@@ -53,7 +57,7 @@ header a {
   font-size: 30px;
 }
 
-section, footer {
+section .container, footer {
   padding: 40px 20px;
   display: flex;
   gap: 20px;
@@ -69,7 +73,7 @@ section, footer {
   color: white;
   padding: 10px 20px;
   text-decoration: none;
-  transition: background 800ms ease-in-out, box-shadow 500ms ease-in-out;
+  transition: all 800ms ease-in-out;
 }
 .btn:hover {
   background: #b184e5;
@@ -83,7 +87,7 @@ section, footer {
   font-weight: 400;
   float: right;
   cursor: pointer;
-  transition: background 800ms ease-in-out, font-weight 500ms ease-in-out;
+  transition: all 800ms ease-in-out;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -100,6 +104,8 @@ section, footer {
 footer {
   color: white;
   background-color: #353535;
+  padding: 40px 25px;
+  align-items: flex-start;
 }
 footer h2 {
   padding-bottom: 0;
@@ -120,39 +126,6 @@ footer i {
   margin-right: 10px;
 }
 
-@media (min-width: 768px) {
-  body {
-    font-size: 17px;
-  }
-  .container {
-    max-width: 1055px;
-    margin: 0 auto;
-    width: 100%;
-  }
-  .logo {
-    font-size: 37px;
-    line-height: 55px;
-  }
-  .btn {
-    padding: 16px 30px;
-  }
-  footer .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 15px;
-  }
-  footer .logo {
-    font-size: 18px;
-    order: 2;
-    padding: 0;
-  }
-  footer ul {
-    display: flex;
-    gap: 15px;
-  }
-}
 @-webkit-keyframes loader {
   from {
     visibility: visible;
@@ -161,6 +134,7 @@ footer i {
     visibility: hidden;
   }
 }
+
 @keyframes loader {
   from {
     visibility: visible;
@@ -230,9 +204,6 @@ footer i {
   font-weight: 300;
   padding-bottom: 40px;
 }
-.teazer h2 {
-  padding: 0 30px 20px 30px;
-}
 
 .bgWhite {
   background-color: white;
@@ -257,10 +228,10 @@ footer i {
   gap: 25px;
   padding-left: 30px;
 }
-.fonctionement li:last-child {
+.fonctionement li:hover {
   background-color: #F5EDFF;
 }
-.fonctionement li:last-child i {
+.fonctionement li:hover i {
   color: #9356DC;
 }
 .fonctionement li span {
@@ -280,6 +251,7 @@ footer i {
   align-items: center;
   flex-direction: column;
   gap: 18px;
+  width: 100%;
 }
 .cards--restaurant article {
   background: white;
@@ -287,6 +259,7 @@ footer i {
   border-radius: 15px;
   padding: 0 12px 12px 12px;
   overflow: hidden;
+  width: calc(100% - 24px);
 }
 .cards--restaurant article a {
   color: #353535;
@@ -296,12 +269,10 @@ footer i {
 }
 .cards--restaurant .thunbmail {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
   height: 175px;
   margin: 0 -12px 16px -12px;
+  overflow: hidden;
+  display: block;
 }
 .cards--restaurant .thunbmail span {
   position: absolute;
@@ -315,37 +286,31 @@ footer i {
   z-index: 2;
 }
 .cards--restaurant .thunbmail img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
   transition: all 500ms ease-in-out;
 }
 .cards--restaurant .thunbmail img:hover {
   transform: scale(1.3);
 }
 
-@media (min-width: 768px) {
-  .teazer {
-    font-size: 18px;
+@-webkit-keyframes menu-item {
+  from {
+    opacity: 0;
   }
-  .teazer h2 {
-    font-size: 40px;
+  to {
+    opacity: 100;
   }
-  .bgWhite h2 {
-    align-self: flex-start;
+}
+
+@keyframes menu-item {
+  from {
+    opacity: 0;
   }
-  .fonctionement {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 16px;
-  }
-  .fonctionement li {
-    width: 28%;
-  }
-  .cards--restaurant {
-    flex-direction: row;
-  }
-  .cards--restaurant article {
-    width: 311px;
-    flex-shrink: 0;
+  to {
+    opacity: 100;
   }
 }
 .menu {
@@ -355,20 +320,25 @@ footer i {
   padding: 30px 15px;
   position: relative;
   z-index: 2;
+}
+.menu .itens {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .menu h2 {
   padding: 0;
 }
 .menu .like {
   font-size: 24px;
-  margin-right: 15px;
+  margin-left: 30px;
+  float: none;
 }
 .menu h3 {
   font-weight: 300;
   font-size: 16px;
   align-self: flex-start;
+  margin: 40px 0 12px 0;
 }
 .menu h3::after {
   content: "";
@@ -378,11 +348,11 @@ footer i {
   width: 40px;
   margin-top: 10px;
 }
-.menu section, .menu .restaurant-name {
-  display: block;
-  max-width: 630px;
+.menu .restaurant-name {
+  display: flex;
   margin: 0 auto;
   width: calc(100% - 40px);
+  align-items: center;
 }
 .menu ul {
   display: flex;
@@ -395,12 +365,14 @@ footer i {
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   display: flex;
-  margin: 12px 0;
   height: 70px;
+  width: 100%;
   overflow: hidden;
   flex-direction: column;
   position: relative;
   cursor: pointer;
+  -webkit-animation: menu-item 4s ease-in;
+          animation: menu-item 4s ease-in;
 }
 .menu li * {
   transition: all 500ms ease-in-out;
@@ -434,19 +406,75 @@ footer i {
   right: -60px;
 }
 .menu .btn {
-  max-width: 180px;
-  margin: 0 auto;
+  max-width: 120px;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
 }
 .menu h4 {
   font-size: 18px;
   line-height: 25px;
+}
+.menu h4, .menu p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 300px;
+  max-width: 250px;
 }
 
 @media (min-width: 768px) {
+  body {
+    font-size: 17px;
+  }
+  .container {
+    max-width: 1055px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-size: 37px;
+    line-height: 55px;
+  }
+  .btn {
+    padding: 16px 30px;
+  }
+  footer .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+  footer .logo {
+    font-size: 18px;
+    order: 2;
+    padding: 0;
+  }
+  footer ul {
+    display: flex;
+    gap: 15px;
+  }
+  .teazer {
+    font-size: 18px;
+  }
+  .teazer h2 {
+    font-size: 40px;
+  }
+  .bgWhite h2 {
+    align-self: flex-start;
+  }
+  .fonctionement {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
+    gap: 20px;
+  }
+  .fonctionement li {
+    width: 28%;
+  }
+  .cards--restaurant {
+    flex-direction: row;
+    align-items: stretch;
+  }
   .banner {
     max-height: 400px;
     display: flex;
@@ -457,10 +485,18 @@ footer i {
     top: -80px;
     font-size: 16px;
   }
-  .menu li {
-    width: 100%;
-  }
   .menu h4 {
     max-width: none;
+  }
+  .menu .itens {
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+  }
+  .menu section {
+    max-width: 30%;
+  }
+  .menu h4, .menu p {
+    padding-right: 30px;
   }
 }/*# sourceMappingURL=style.css.map */

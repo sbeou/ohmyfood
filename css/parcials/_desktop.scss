@@ -1,0 +1,80 @@
+@media (min-width:768px) {
+    body {
+        font-size:17px;
+    }
+    .container {
+        max-width:1055px;
+        margin: 0 auto;
+    }
+    .logo {
+        font-size: 37px;
+        line-height:55px;
+    }
+    .btn {
+        padding: 16px 30px;
+    }
+    footer {
+        .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        }
+        .logo {
+            font-size: 18px;
+            order: 2;
+            padding: 0;
+        }
+        ul {
+            display: flex;
+            gap: 15px;
+        }
+    }
+    .teazer {
+        font-size:18px;
+        h2 {
+        font-size:40px;
+        }
+    }
+    .bgWhite h2 {
+        align-self: flex-start;
+    }
+    .fonctionement {
+        flex-direction: row;
+        justify-content: space-between;
+        width:100%;
+        font-size: 16px;
+        gap:20px;
+        li {
+            width:28%;
+        }
+    }
+    .cards--restaurant {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .banner {
+        max-height: 400px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+    .menu {
+        top:-80px;
+        font-size: 16px;
+        h4 {
+            max-width: none;
+        }
+        .itens {
+            flex-direction: row;
+            gap: 30px;
+            justify-content: center;
+        }
+        section {
+            max-width: 30%;
+        }
+        h4, p {
+            padding-right: 30px;
+        }
+    }
+}

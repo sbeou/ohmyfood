@@ -13,7 +13,9 @@ $grey2: #EAEAEA;
     margin: 0;
     padding: 0;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: $light_grey;
     font-family: 'Roboto';
@@ -61,7 +63,7 @@ header {
     font-size: 30px;
 }
 
-section, footer {
+section .container, footer {
     padding: 40px 20px;
     display: flex;
     gap: 20px;
@@ -77,7 +79,7 @@ section, footer {
     color: white;
     padding: 10px 20px;
     text-decoration: none;
-    transition: background 800ms ease-in-out, box-shadow 500ms ease-in-out;
+    transition: all 800ms ease-in-out;
     &:hover {
         background: #b184e5;
         background: linear-gradient(200.64deg, #b184e5 -5.2%, #ff9ee5 110.74%);
@@ -90,7 +92,7 @@ section, footer {
     font-weight: 400;
     float: right;
     cursor: pointer;
-    transition: background 800ms ease-in-out, font-weight 500ms ease-in-out;
+    transition: all 800ms ease-in-out;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -106,6 +108,8 @@ section, footer {
 footer {
     color: white;
     background-color: $grey;
+    padding: 40px 25px;
+    align-items: flex-start;
     h2 {
         padding-bottom: 0;
     }
@@ -125,42 +129,8 @@ footer {
         margin-right: 10px;
     }
 }
-@media (min-width:768px) {
-    body {
-        font-size:17px;
-    }
-    .container {
-        max-width:1055px;
-        margin: 0 auto;
-        width:100%;
-    }
-    .logo {
-        font-size: 37px;
-        line-height:55px;
-    }
-    .btn {
-        padding: 16px 30px;
-    }
-    footer {
-        .container {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 15px;
-        }
-        .logo {
-            font-size: 18px;
-            order: 2;
-            padding: 0;
-        }
-        ul {
-            display: flex;
-            gap: 15px;
-        }
-    }
-}
 
 @import "parcials/loader";
 @import "parcials/home";
 @import "parcials/restaurant-page";
+@import "parcials/desktop";
